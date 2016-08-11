@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>WHM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="css/flat-ui.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-inverse" style="border-radius:0px;">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#" style="padding-right:40px;">WHM</a>
+    </div>
+        
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+       <ul class="nav navbar-nav navbar-left">
+        <li class="active"><a href="#" style="border-radius:0px;">Customer Activity<span class="badge" style="margin-left:5px;background-color:#fff;color:#000;">50</span></a></li>
+        <!-- <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Customer Activity <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Receive old customer</a></li>
+            <li><a href="#">Pick Up</a></li>
+            <li><a href="#">Dispatch</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Relocation</a></li> -->
+        
+        <li><a href="#">WH Process<span class="badge" style="margin-left:5px;background-color:#fff;color:#000;">25</span></a></a></li>
+        <li><a href="#">Refurb<span class="badge" style="margin-left:5px;background-color:#fff;color:#000;">10</span></a></a></li>  
+
+
+      </ul>
+
+      
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="fui-location"></span>&nbsp;Bangalore <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Mumbai</a></li>
+            <li><a href="#">Pune</a></li>
+          </ul>
+        </li>
+        <li><a href="#"><span class="fui-exit"></span></a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container">
+<div class="col-lg-12">
+  
+  <div class="col-lg-2 col-md-2 col-sm-6" style="margin-left:-15px;">
+    <div class="thumbnail">
+      <h3 class="text-center">10</h3>
+      <div class="caption text-center">
+        <p>Pick Ups</p>
+      </div>
+    </div>
+  </div>
+
+<div class="col-lg-2 col-md-2 col-sm-6">
+    <div class="thumbnail">
+      <h3 class="text-center">10</h3>
+      <div class="caption text-center">
+        <p>Dispatch</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-2 col-md-2 col-sm-6">
+    <div class="thumbnail">
+      <h3 class="text-center">10</h3>
+      <div class="caption text-center">
+        <p>Swap</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-2 col-md-2 col-sm-6">
+    <div class="thumbnail">
+      <h3 class="text-center">10</h3>
+      <div class="caption text-center">
+        <p>Pause</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-2 col-md-2 col-sm-6">
+    <div class="thumbnail">
+      <h3 class="text-center">10</h3>
+      <div class="caption text-center">
+        <p>Relocate</p>
+      </div>
+    </div>
+  </div>
+
+<div class="col-lg-2 col-md-2 col-sm-6">
+    <div class="thumbnail" style="background-color:#2980b9;color:#fff;border:#3498db;">
+      <h3 class="text-center">50</h3>
+      <div class="caption text-center">
+        <p style="color:#fff;">Total Activities</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+  
+ <div class="col-lg-12">   
+ <h6 style="font-size:1.1em;">Warehouse Data - Customer Activity - 14th March 2013</h6>
+ <small>Select an order to print pick list or filter orders by date</small>   
+ </div>
+
+<div class="col-lg-8">
+<table class="table table-striped table-hover table-bordered">
+<thead>
+<tr>
+<th><button class="btn btn-embossed btn-sm  disabled" data-toggle="modal" data-target="#confirm-pick-list" id="print-pick-list"><span class="fui-document"></span>Print Pick list</button></th>
+<th style="padding-right:58px;">
+  <div class="col-lg-12">
+  Filter by date
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-btn">
+          <button class="btn" type="button"><span class="fui-calendar"></span></button>
+        </span>
+        <input type="text" class="form-control" value="14 March, 2013" id="datepicker-01" />
+  </div>
+  </div>
+  </div>
+  </th>
+</tr>
+</thead>
+</table>
+<!-- <ul class="list-inline">
+  <li><button class="btn btn-embossed btn-danger"><span class="fui-document"></span>Print Pick list</button></li>
+  <li>
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-btn">
+          <button class="btn" type="button"><span class="fui-calendar"></span></button>
+        </span>
+        <input type="text" class="form-control" value="14 March, 2013" id="datepicker-01" />
+  </div>
+  </div>
+  </li>
+</ul> -->
+</div>
+
+<div class="warehouse-data col-lg-12">
+
+<table class="table table-striped table-hover table-bordered">
+
+<thead>
+  <tr>
+    <th><label class="checkbox no-label toggle-all" for="checkbox-table-1"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" value="" id="checkbox-table-1" data-toggle="checkbox"></label></th>
+    <th>Activity ID</th>
+    <th>Activity Type</th>
+    <th>Activity Status</th>
+    <th>CRM</th>
+  </tr>
+</thead>
+
+<tbody>
+
+  <tr>
+    <td><label class="checkbox no-label" for="checkbox-table-0"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" value="" id="checkbox-table-0" data-toggle="checkbox"></label></td>
+    <td><a href="whm-dispatch.html">BLR123</a></td>
+    <td>Pick Up</td>
+    <td>With Customer</td>
+    <td>Jesse Stevens</td>
+  </tr>
+
+  <tr>
+    <td><label class="checkbox no-label" for="checkbox-table-2"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" value="" id="checkbox-table-2" data-toggle="checkbox"></label></td>
+    <td>BLR123</td>
+    <td>Pick Up</td>
+    <td>With Customer</td>
+    <td>Jesse Stevens</td>
+  </tr> 
+
+  <tr>
+    <td><label class="checkbox no-label" for="checkbox-table-2"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" value="" id="checkbox-table-2" data-toggle="checkbox"></label></td>
+    <td>BLR123</td>
+    <td>Pick Up</td>
+    <td>With Customer</td>
+    <td>Jesse Stevens</td>
+  </tr>  
+
+  <tr>
+    <td><label class="checkbox no-label" for="checkbox-table-2"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" value="" id="checkbox-table-2" data-toggle="checkbox"></label></td>
+    <td>BLR123</td>
+    <td>Pick Up</td>
+    <td>With Customer</td>
+    <td>Jesse Stevens</td>
+  </tr>  
+
+  <tr>
+    <td><label class="checkbox no-label" for="checkbox-table-2"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" value="" id="checkbox-table-2" data-toggle="checkbox"></label></td>
+    <td>BLR123</td>
+    <td>Pick Up</td>
+    <td>With Customer</td>
+    <td>Jesse Stevens</td>
+  </tr>  
+
+</tbody>
+
+</table>
+</div>
+
+
+<div class="modal" id="confirm-pick-list">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close fui-cross" data-dismiss="modal" aria-hidden="true"></button>
+        <h4 class="modal-title">WHM - Pick list printed</h3>
+      </div>
+
+      <div class="modal-body alert alert-success">
+        <p><span class="fui-check"></span>Your pick list for customer Adit Gupta has been printed successfully.</p>
+      </div>
+
+      <div class="modal-footer">
+        <a href="whm-dispatch-2.html" class="btn btn-primary btn-embossed">Continue</a>
+      </div>
+    </div>
+  </div>  
+</div>
+
+
+
+</div>
+
+
+
+   <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/bootstrap-switch.js"></script>
+    <script src="js/flatui-checkbox.js"></script>
+    <script src="js/flatui-radio.js"></script>
+    <script src="js/jquery.tagsinput.js"></script>
+    <script src="js/jquery.placeholder.js"></script>
+    <script>
+    var datepickerSelector = '#datepicker-01';
+$(datepickerSelector).datepicker({
+  showOtherMonths: true,
+  selectOtherMonths: true,
+  dateFormat: "d MM, yy",
+  yearRange: '-1:+1'
+}).prev('.btn').on('click', function (e) {
+  e && e.preventDefault();
+  $(datepickerSelector).focus();
+});
+
+// Now let's align datepicker with the prepend button
+$(datepickerSelector).datepicker('widget').css({'margin-left': -$(datepickerSelector).prev('.btn').outerWidth()});
+</script>
+
+<script>
+//   if(document.getElementById('#checkbox-table-0').checked) {
+//     $("#print-pick-list").addClass('btn-info')
+// } else {
+//     $("#txtAge").hide();
+// }
+
+$('input#checkbox-table-0').change(function () {
+    if ($('input#checkbox-table-0').is(':checked')) {
+        $('#print-pick-list').removeClass('disabled').addClass('btn-danger');
+    } else {
+        // $('input#Checkbox1').removeClass('checked');
+         $('#print-pick-list').addClass('disabled').removeClass('btn-danger');
+    }
+});
+
+// $('#checkbox-table-0').click(function() {
+//     $("#print-pick-list").removeClass('disabled');
+// });
+
+</script>
+
+  </body>
+</html>
