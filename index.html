@@ -121,7 +121,7 @@
     <div class="thumbnail total-selected" id="total-selected">
       <h3 class="text-center">50</h3>
       <div class="caption text-center">
-        <p>Total Activities</p>
+        <p class="total" onclick="changeToTotal()">Total Activities</p>
       </div>
     </div>
   </div>
@@ -312,6 +312,16 @@ function changeToDispatch() {
     var pickUp = rows.filter('.row-pickup').hide();
     $('#dispatch-thumb').addClass('dispatch-selected');
     $('#total-selected').removeClass('total-selected');
+  });
+}
+
+function changeToTotal() {
+  var rows = $('table.customer-data tr');
+
+  $('.total').click(function(){
+    var totalActivities = rows.filter('.row-pickup').show();
+    $('#dispatch-thumb').removeClass('dispatch-selected');
+    $('#total-selected').addClass('total-selected');
   });
 }
 
