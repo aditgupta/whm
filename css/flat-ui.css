@@ -6324,3 +6324,27 @@ fieldset[disabled] .navbar-inverse .navbar-btn.active {
 .status{
   display:none;
 }
+
+.dispatch {
+  cursor: pointer;
+}
+
+.dispatch-selected {
+  background-color:#2980b9;
+  color:#fff;
+  border:#3498db;
+}
+
+.dispatch-selected p {
+  color:#fff;
+}
+
+.total-selected {
+  background-color:#2980b9;
+  color:#fff;
+  border:#3498db;
+}
+
+.total-selected p{
+  color:#fff;
+}

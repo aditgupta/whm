@@ -82,10 +82,10 @@
   </div>
 
 <div class="col-lg-2 col-md-2 col-sm-6">
-    <div class="thumbnail">
+    <div class="thumbnail" id="dispatch-thumb" >
       <h3 class="text-center">10</h3>
       <div class="caption text-center">
-        <p>Dispatch</p>
+        <p class="dispatch" onclick="changeToDispatch()">Dispatch</p>
       </div>
     </div>
   </div>
@@ -118,10 +118,10 @@
   </div>
 
 <div class="col-lg-2 col-md-2 col-sm-6">
-    <div class="thumbnail" style="background-color:#2980b9;color:#fff;border:#3498db;">
+    <div class="thumbnail total-selected" id="total-selected">
       <h3 class="text-center">50</h3>
       <div class="caption text-center">
-        <p style="color:#fff;">Total Activities</p>
+        <p>Total Activities</p>
       </div>
     </div>
   </div>
@@ -174,7 +174,7 @@
 
 <div class="warehouse-data col-lg-12">
 
-<table class="table table-striped table-hover table-bordered">
+<table class="table table-striped table-hover table-bordered customer-data">
 
 <thead>
   <tr>
@@ -188,15 +188,15 @@
 
 <tbody>
 
-  <tr>
+  <tr class="row-dispatch">
     <td><label class="checkbox no-label" for="checkbox-table-0"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" value="" id="checkbox-table-0" data-toggle="checkbox"></label></td>
     <td><a href="whm-dispatch.html">BLR123</a></td>
-    <td>Pick Up</td>
+    <td>Dispatch</td>
     <td>With Customer</td>
     <td>Jesse Stevens</td>
   </tr>
 
-  <tr>
+  <tr class="row-pickup">
     <td><label class="checkbox no-label" for="checkbox-table-2"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" value="" id="checkbox-table-2" data-toggle="checkbox"></label></td>
     <td>BLR123</td>
     <td>Pick Up</td>
@@ -204,7 +204,7 @@
     <td>Jesse Stevens</td>
   </tr> 
 
-  <tr>
+  <tr class="row-pickup">
     <td><label class="checkbox no-label" for="checkbox-table-2"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" value="" id="checkbox-table-2" data-toggle="checkbox"></label></td>
     <td>BLR123</td>
     <td>Pick Up</td>
@@ -212,7 +212,7 @@
     <td>Jesse Stevens</td>
   </tr>  
 
-  <tr>
+  <tr class="row-pickup">
     <td><label class="checkbox no-label" for="checkbox-table-2"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" value="" id="checkbox-table-2" data-toggle="checkbox"></label></td>
     <td>BLR123</td>
     <td>Pick Up</td>
@@ -220,7 +220,7 @@
     <td>Jesse Stevens</td>
   </tr>  
 
-  <tr>
+  <tr class="row-pickup">
     <td><label class="checkbox no-label" for="checkbox-table-2"><span class="icons"><span class="first-icon fui-checkbox-unchecked"></span><span class="second-icon fui-checkbox-checked"></span></span><input type="checkbox" value="" id="checkbox-table-2" data-toggle="checkbox"></label></td>
     <td>BLR123</td>
     <td>Pick Up</td>
@@ -304,6 +304,16 @@ $('input#checkbox-table-0').change(function () {
 // $('#checkbox-table-0').click(function() {
 //     $("#print-pick-list").removeClass('disabled');
 // });
+function changeToDispatch() {
+
+  var rows = $('table.customer-data tr');
+
+  $('.dispatch').click(function(){
+    var pickUp = rows.filter('.row-pickup').hide();
+    $('#dispatch-thumb').addClass('dispatch-selected');
+    $('#total-selected').removeClass('total-selected');
+  });
+}
 
 </script>
 
