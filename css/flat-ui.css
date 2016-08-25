@@ -4738,6 +4738,15 @@ a.list-group-item.active > .badge,
   border-width: 8px 6px 0;
   margin-left: 12px;
 }
+
+.navbar-nav .dropdown-toggle .caret2 {
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+  border-width: 8px 6px 0;
+  margin-left: 12px;
+}
+
+
 .navbar-nav > li > a:hover,
 .navbar-nav > li > a:focus,
 .navbar-nav .open > a:focus,
